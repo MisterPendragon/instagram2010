@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.personFragment">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/white"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/theNickNameId"
+                android:text="Pendragon"
+                android:textColor="@color/black"
+                android:textSize="19sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_more"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/avaId"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/avatar"
+        app:layout_constraintBottom_toTopOf="@+id/editProfileId"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+    <TextView
+        android:id="@+id/numberOfPhotoId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintRight_toRightOf="@+id/textPhotoId"
+        app:layout_constraintLeft_toLeftOf="@+id/textPhotoId"
+        app:layout_constraintBottom_toTopOf="@id/textPhotoId"
+
+        />
+    <TextView
+        android:id="@+id/numberOfSubscribersId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintRight_toRightOf="@+id/textSubId"
+        app:layout_constraintLeft_toLeftOf="@+id/textSubId"
+        app:layout_constraintBottom_toTopOf="@id/textSubId"
+
+        />
+    <TextView
+        android:id="@+id/numberOfYourSubscriptionsId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintRight_toRightOf="@+id/textYourSubId"
+        app:layout_constraintLeft_toLeftOf="@+id/textYourSubId"
+        app:layout_constraintBottom_toTopOf="@id/textYourSubId"
+
+        />
+    <TextView
+        android:id="@+id/textPhotoId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Публикац .."
+        android:textSize="15sp"
+        android:textStyle="normal"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toRightOf="@id/avaId"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="55dp"
+        />
+    <TextView
+        android:id="@+id/textSubId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Подписчи .."
+        android:textSize="15sp"
+        android:textStyle="normal"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toRightOf="@id/textPhotoId"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="55dp"
+        />
+    <TextView
+        android:id="@+id/textYourSubId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Подписки"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toRightOf="@id/textSubId"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="55dp"
+        />
+
+
+    <Button
+        android:id="@+id/editProfileId"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:text="Редактировать профиль"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/avaId"
+        android:background="@drawable/background_for_button_edit_profile"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:layout_marginBottom="10dp"
+        android:text="@string/large_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editProfileId" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

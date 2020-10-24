@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/theUserOfSearch">
+<de.hdodenhof.circleimageview.CircleImageView
+    android:id="@+id/avaFromSearch"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:src="@drawable/avatar"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    />
+    <TextView
+        android:id="@+id/nameOfUserSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toRightOf="@id/avaFromSearch"
+        app:layout_constraintTop_toTopOf="@id/avaFromSearch"
+        android:layout_marginLeft="10dp"
+        />
+    <TextView
+        android:id="@+id/nameAndSurnameSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name and Surname"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/nameOfUserSearch"
+        app:layout_constraintLeft_toLeftOf="@id/nameOfUserSearch"
+        />
+    <Button
+        android:id="@+id/subscribeButtonOfSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="Подписаться"
+        android:textSize="12sp"
+        android:padding="10dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/nameOfUserSearch"
+        app:layout_constraintBottom_toBottomOf="@id/nameAndSurnameSearch"
+        android:background="@drawable/background_for_button_edit_profile"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
